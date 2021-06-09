@@ -25,7 +25,7 @@ public class StringUtil {
 	/**
 	 * 是否为空
 	 * 
-	 * @param str
+	 * @param str 字符串
 	 * @return 为空返回true
 	 */
 	public static boolean isEmpty(String str) {
@@ -35,8 +35,8 @@ public class StringUtil {
 	/**
 	 * 比较字符串
 	 * 
-	 * @param s1
-	 * @param s2
+	 * @param s1 字符串1
+	 * @param s2 字符串2
 	 * @return 相同返回true
 	 */
 	public static boolean eq(String s1, String s2) {

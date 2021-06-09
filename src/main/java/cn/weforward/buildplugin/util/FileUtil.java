@@ -83,8 +83,8 @@ public class FileUtil {
 	/**
 	 * 关闭
 	 * 
-	 * @param able
-	 * @throws IOException
+	 * @param able 可关闭接口
+	 * @throws IOException IO异常
 	 */
 	public static void close(Closeable able) throws IOException {
 		if (null != able) {
@@ -95,9 +95,11 @@ public class FileUtil {
 	/**
 	 * 复制文件,支持递归复制
 	 * 
-	 * @param file
-	 * @param newPath
-	 * @throws IOException
+	 * @param file    文件
+	 * @param newPath 新路径
+	 * @param log     日志
+	 * @param options 选项
+	 * @throws IOException IO异常
 	 */
 	public static void copy(File file, String newPath, Log log, int options) throws IOException {
 		if (file.isDirectory()) {
@@ -116,9 +118,9 @@ public class FileUtil {
 	/**
 	 * 删除文件支持递归删除
 	 * 
-	 * @param file
-	 * @param log
-	 * @throws IOException
+	 * @param file 文件
+	 * @param log  日志
+	 * @throws IOException IO异常
 	 */
 	public static void delate(File file, Log log) throws IOException {
 		if (!file.exists()) {
@@ -149,9 +151,10 @@ public class FileUtil {
 	/**
 	 * 复制文件，只支持文件类型，不支持目录
 	 * 
-	 * @param file
-	 * @param newPath
-	 * @throws IOException
+	 * @param file    文件
+	 * @param newPath 路径
+	 * @param log     日志
+	 * @throws IOException IO异常
 	 */
 	public static void copyFile(File file, String newPath, Log log) throws IOException {
 		InputStream in = null;
@@ -176,7 +179,7 @@ public class FileUtil {
 	/**
 	 * 确保目录存在
 	 * 
-	 * @param file
+	 * @param file 文件
 	 */
 	public static void sureDir(File file) {
 		if (null == file) {
@@ -193,7 +196,7 @@ public class FileUtil {
 	/**
 	 * 清理目录
 	 * 
-	 * @param dir
+	 * @param dir 目录
 	 */
 	public static void clearDir(File dir) {
 		if (dir.isDirectory()) {
@@ -210,9 +213,9 @@ public class FileUtil {
 	/**
 	 * 复制文件
 	 * 
-	 * @param in
-	 * @param newPath
-	 * @throws IOException
+	 * @param in      输入流
+	 * @param newPath 路径
+	 * @throws IOException IO异常
 	 */
 	public static void copyFile(InputStream in, String newPath) throws IOException {
 		FileOutputStream out = null;
@@ -232,8 +235,8 @@ public class FileUtil {
 	/**
 	 * 是否标记位
 	 * 
-	 * @param options
-	 * @param option
+	 * @param options 选项集
+	 * @param option  选项
 	 * @return true表示有匹配
 	 */
 	public static boolean isOption(int options, int option) {

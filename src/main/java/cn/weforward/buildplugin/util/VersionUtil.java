@@ -57,8 +57,10 @@ public class VersionUtil {
 	/**
 	 * 获取增量版本号
 	 * 
+	 * @param project     项目
+	 * @param mainVersion 主版本
 	 * @return 版本号
-	 * @throws MojoFailureException
+	 * @throws MojoFailureException 异常
 	 */
 	public static String getIncVersion(MavenProject project, String mainVersion) throws MojoFailureException {
 		int num = getIncVersionNum(project.getVersion(), mainVersion);
@@ -88,8 +90,10 @@ public class VersionUtil {
 	/**
 	 * 生成版本号（递增增量版本号）
 	 * 
+	 * @param project     项目
+	 * @param mainVersion 主版本
 	 * @return 版本号
-	 * @throws MojoFailureException
+	 * @throws MojoFailureException 异常
 	 */
 	public static String genIncVersion(MavenProject project, String mainVersion) throws MojoFailureException {
 		int num = getIncVersionNum(project.getVersion(), mainVersion);
@@ -100,8 +104,9 @@ public class VersionUtil {
 	/**
 	 * 设置版本号(修改pom.xml中的version节点)
 	 * 
-	 * @param version
-	 * @throws MojoFailureException
+	 * @param project 项目
+	 * @param version 版本
+	 * @throws MojoFailureException 异常
 	 */
 	public static void setVersion(MavenProject project, String version) throws MojoFailureException {
 		project.setVersion(version);
@@ -202,8 +207,9 @@ public class VersionUtil {
 	/**
 	 * 设置版本号(修改pom.xml中的version节点)
 	 * 
-	 * @param version
-	 * @throws MojoFailureException
+	 * @param file    文件
+	 * @param version 版本
+	 * @throws MojoFailureException 异常
 	 */
 	public static void setParentVersion(File file, String version) throws MojoFailureException {
 		Document doc;

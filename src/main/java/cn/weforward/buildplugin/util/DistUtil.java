@@ -46,13 +46,13 @@ public class DistUtil {
 	/**
 	 * 文件上传的方法
 	 * 
-	 * @param disturl
-	 * @param file
-	 * @param username
-	 * @param password
-	 * @param progressBar
-	 * @throws IOException
-	 * @throws InterruptedException
+	 * @param disturl     上传链接
+	 * @param file        文件
+	 * @param username    用户名
+	 * @param password    密码
+	 * @param progressBar 进度条
+	 * @throws IOException          IO异常
+	 * @throws InterruptedException 中断异常
 	 */
 	public static void uploadFile(String disturl, File file, String username, String password,
 			UploadProgressBar progressBar) throws IOException, InterruptedException {
@@ -100,11 +100,11 @@ public class DistUtil {
 	/**
 	 * 文件上传的方法
 	 * 
-	 * @param disturl
-	 * @param file
-	 * @param username
-	 * @param password
-	 * @throws IOException
+	 * @param disturl  上传链接
+	 * @param file     文件
+	 * @param username 用户名
+	 * @param password 密码
+	 * @throws IOException IO异常
 	 */
 	public static void uploadFile(String disturl, File file, String username, String password) throws IOException {
 		String end = "\r\n";

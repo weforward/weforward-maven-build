@@ -49,9 +49,9 @@ public class JarUtil {
 	 * @param mainfest 清单
 	 * @param includes 包含文件
 	 * @param excludes 排除文件
-	 * @throws ArchiverException
-	 * @throws ManifestException
-	 * @throws IOException
+	 * @throws ArchiverException 异常
+	 * @throws ManifestException 异常
+	 * @throws IOException       异常
 	 */
 	public static void packageJar(JarArchiver archiver, File classdir, Map<String, String> mainfest, String[] includes,
 			String[] excludes) throws ArchiverException, ManifestException, IOException {
@@ -75,11 +75,13 @@ public class JarUtil {
 	 * @param archiver 归档工具
 	 * @param classdir 类文件目录
 	 * @param mainfest 清单
+	 * @param libs     依赖包
 	 * @param includes 包含文件
 	 * @param excludes 排除文件
-	 * @throws ArchiverException
-	 * @throws ManifestException
-	 * @throws IOException
+	 * @throws ArchiverException 异常
+	 * @throws ManifestException 异常
+	 * @throws IOException       异常
+	 * @return jar打包类
 	 */
 	public static JarArchiver packageSpringBootJar(JarArchiver archiver, File classdir, Map<String, String> mainfest,
 			List<File> libs, String[] includes, String[] excludes)
