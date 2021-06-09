@@ -187,6 +187,7 @@ public abstract class AbstractBuildMojo extends AbstractMojo {
 	/**
 	 * svn用户名
 	 * 
+	 * @return svn用户名
 	 */
 	public String getSvnUserName() {
 		return svnUserName;
@@ -195,6 +196,7 @@ public abstract class AbstractBuildMojo extends AbstractMojo {
 	/**
 	 * svn密码
 	 * 
+	 * @return svn密码
 	 */
 	public String getSvnPassword() {
 		return svnPassword;
@@ -203,6 +205,7 @@ public abstract class AbstractBuildMojo extends AbstractMojo {
 	/**
 	 * git用户名
 	 * 
+	 * @return git用户名
 	 */
 	public String getGitUserName() {
 		return gitUserName;
@@ -211,22 +214,35 @@ public abstract class AbstractBuildMojo extends AbstractMojo {
 	/**
 	 * git密码
 	 * 
+	 * @return git密码
 	 */
 	public String getGitPassword() {
 		return gitPassword;
 	}
 
-	/** 包含类文件路径 */
+	/**
+	 * 获取包含类文件路径
+	 * 
+	 * @return 包含类文件路径
+	 */
 	protected String[] getIncludes() {
 		return includes;
 	}
 
-	/** 排除类文件路径 */
+	/**
+	 * 获取排除类文件路径
+	 * 
+	 * @return 排除类文件路径
+	 */
 	protected String[] getExcludes() {
 		return excludes;
 	}
 
-	/** 获取主版本 */
+	/**
+	 * 获取主版本
+	 * 
+	 * @return 主版本号
+	 */
 	public String getMainVersion() {
 		return null == mainVersion ? DEFAULT_MAIN_VERSION : mainVersion;
 	}
@@ -240,7 +256,7 @@ public abstract class AbstractBuildMojo extends AbstractMojo {
 	 * 获取版本控制器
 	 * 
 	 * @return 版本控制器对象
-	 * @throws MojoFailureException
+	 * @throws MojoFailureException mojo异常
 	 */
 	public RevisionControl getRC() throws MojoFailureException {
 		if (null != m_RC) {
@@ -268,7 +284,7 @@ public abstract class AbstractBuildMojo extends AbstractMojo {
 	 * 
 	 * @param incVersion 增量版本
 	 * @return 版本号
-	 * @throws MojoFailureException
+	 * @throws MojoFailureException mojo异常
 	 */
 	protected String genVersion(String incVersion) throws MojoFailureException {
 		String newVersion = null;
@@ -281,7 +297,7 @@ public abstract class AbstractBuildMojo extends AbstractMojo {
 	 * 创建jar包
 	 * 
 	 * @param version 版本号
-	 * @throws MojoFailureException
+	 * @throws MojoFailureException mojo异常
 	 */
 	protected void createJar(String version) throws MojoFailureException {
 		Map<String, String> map = new HashMap<String, String>();
@@ -453,7 +469,7 @@ public abstract class AbstractBuildMojo extends AbstractMojo {
 	 * @param pom       pom文件
 	 * @param jar       执行包
 	 * @param source    源码包
-	 * @throws MojoFailureException
+	 * @throws MojoFailureException mojo异常
 	 */
 	protected void install(Artifact artifact, String packaging, File pom, File jar, File source)
 			throws MojoFailureException {
@@ -499,7 +515,7 @@ public abstract class AbstractBuildMojo extends AbstractMojo {
 	 * @param pom       pom文件
 	 * @param jar       执行包
 	 * @param source    源码包
-	 * @throws MojoFailureException
+	 * @throws MojoFailureException mojo异常
 	 */
 	protected void deploy(Artifact artifact, String packaging, File pom, File jar, File source)
 			throws MojoFailureException {

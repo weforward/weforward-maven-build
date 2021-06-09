@@ -23,7 +23,7 @@ public interface RevisionControl {
 	 * 获取最后修改的版本号
 	 * 
 	 * @return 版本号
-	 * @throws MojoFailureException
+	 * @throws MojoFailureException mojo异常
 	 */
 	String getVersion() throws MojoFailureException;
 
@@ -31,24 +31,24 @@ public interface RevisionControl {
 	 * 是否有修改未提交
 	 * 
 	 * @return 有修改未提交返回true
-	 * @throws MojoFailureException
+	 * @throws MojoFailureException mojo异常
 	 */
 	boolean isDirty() throws MojoFailureException;
 
 	/**
 	 * 提交修改
 	 * 
-	 * @param message
-	 * @throws MojoFailureException
+	 * @param message 信息
+	 * @throws MojoFailureException mojo异常
 	 */
 	void commit(String message) throws MojoFailureException;
 
 	/**
 	 * 创建标签
 	 * 
-	 * @param tag
-	 * @param message
-	 * @throws MojoFailureException
+	 * @param tag     标签
+	 * @param message 信息
+	 * @throws MojoFailureException mojo异常
 	 */
 	void tag(String tag, String message) throws MojoFailureException;
 

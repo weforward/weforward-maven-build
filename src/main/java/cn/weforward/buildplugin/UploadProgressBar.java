@@ -25,8 +25,8 @@ public interface UploadProgressBar {
 	/**
 	 * 处理进度
 	 * 
-	 * @param count
-	 * @param sum
+	 * @param count 当前计数
+	 * @param sum   总数
 	 */
 	void progress(long count, long sum);
 
@@ -38,15 +38,15 @@ public interface UploadProgressBar {
 	/**
 	 * 响应
 	 * 
-	 * @param code
-	 * @param message
+	 * @param code    响应码
+	 * @param message 响应消息
 	 */
 	void response(int code, String message);
 
 	/**
 	 * 异常
 	 * 
-	 * @param e
+	 * @param e 异常
 	 */
 	void exception(Exception e);
 }
