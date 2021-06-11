@@ -25,6 +25,11 @@
 		</license>
 	</licenses>
 
+	<scm>
+		<url>https://github.com/weforward/weforward-maven-build.git</url>
+		<tag>https://github.com/weforward/weforward-maven-build.git</tag>
+	</scm>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<mavenArchiverVersion>3.1.1</mavenArchiverVersion>
